@@ -26,7 +26,7 @@ export function appURL() {
 
 export function vercelURL() {
   return process.env.VERCEL_URL
-    ? `https://check-moxie-rewards.vercel.app`
+    ? `https://check-moxie-rewards-v2.vercel.app`
     : undefined;
 }
 
