@@ -150,9 +150,9 @@ const frameHandler = frames(async (ctx) => {
         />
         <div tw="flex text-[35px] absolute top-102 left-95 text-black">{userData?.username}</div>
         <div tw="flex text-[26px] absolute top-115 left-95 text-black">FID: {userData?.fid}</div>
-        <div tw="flex text-[44px] justify-end absolute top-133 right-66 text-[#FF0F15]">{formatNumber(parseFloat(moxieData?.today.allEarningsAmount || "0"))}</div>
-        <div tw="flex text-[44px] justify-end absolute top-155 right-66 text-[#FF0F15]">{formatNumber(parseFloat(moxieData?.weekly.allEarningsAmount || "0"))}</div>
-        <div tw="flex text-[44px] justify-end absolute top-177 right-66 text-[#FF0F15]">{formatNumber(parseFloat(moxieData?.lifetime.allEarningsAmount || "0"))}</div>
+        <div tw="flex text-[44px] justify-end absolute top-133 right-66 text-[#FF0F15]">{formatNumber(parseFloat(moxieData?.today.allEarningsAmount || "0"))} Ⓜ️</div>
+        <div tw="flex text-[44px] justify-end absolute top-155 right-66 text-[#FF0F15]">{formatNumber(parseFloat(moxieData?.weekly.allEarningsAmount || "0"))} Ⓜ️</div>
+        <div tw="flex text-[44px] justify-end absolute top-177 right-66 text-[#FF0F15]">{formatNumber(parseFloat(moxieData?.lifetime.allEarningsAmount || "0"))} Ⓜ️</div>
         <div tw="flex text-[30px] justify-start w-full absolute bottom-5 left-5 text-black">@tieubochet.eth</div>
       </div>
     );
@@ -173,13 +173,13 @@ const frameHandler = frames(async (ctx) => {
   if (!userData) {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check your
+        Check yours
       </Button>
     );
   } else {
     buttons.push(
       <Button action="post" target={{ href: `${appURL()}?userfid=${fid}` }}>
-        Check your
+        Check yours
       </Button>,
       <Button action="link" target={shareUrl}>
         Share
